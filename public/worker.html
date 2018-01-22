@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canidates for Hire</title>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-container>
+                    <template>
+                        <v-expansion-panel>
+                            <v-expansion-panel-content v-for="(item,i)" :key="i">
+                                <div slot="header">Name Place Holder</div>
+                                <v-card>
+                                    <v-card-text class="grey lighten-3">
+                                        <img src="assets/images/worker.jpeg" alt="For Hire Logo" height="200">
+                                         Text Place holder
+                                    
+                                            <div class="text-xs-center">
+                                                <v-btn outline color="indigo">Hire Me</v-btn>
+                                               
+                                            </div>
+                                      
+                                    </v-card-text>
+                                </v-card>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </template>
+
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script>
+        new Vue({ el: '#app' })
+    </script>
+</body>
+
+</html>
