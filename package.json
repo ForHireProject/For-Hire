@@ -4,7 +4,8 @@
   "description": "A app for users to find and hire professionals for local services. Also a place for professionals to submit their skill set and availability for hire. Sign up today!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.1",
-    "sequelize": "^4.31.2"
-  }
+    "path": "^0.12.7",
+    "sequelize": "^4.32.1"
+  },
+  "devDependencies": {}
 }

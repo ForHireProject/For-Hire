@@ -1,15 +1,16 @@
-var express = require("express");
-var router = express.Router();
 
-// Model burger
+// Grabbing our models
 var db = require("../models");
 
-// GET
-router.get("/", function(req, res) {
-      res.render("homePage");
+// Routes
+// =============================================================
+module.exports = function (app) {
+
+    // GET all
+    app.get("/", function (req, res) {
+
     });
-});
 
-module.exports = router;
+};
 
-// API CALLS
+
