@@ -1,34 +1,46 @@
-	<div id="app">
-		<v-app light>
-			<v-toolbar class="white">
-				<v-toolbar-title v-text="title"></v-toolbar-title>
-			</v-toolbar>
-			<v-content>
-				<section class="homepage">
-					<!-- <v-parallax src="assets/images/background.png" height="900"> -->
-						<v-layout column align-center justify-center class="white--text">
-							<img src="assets/images/FHogo.png" alt="For Hire Logo" height="200">
-							<h1 class="white--text mb-2 display-1 text-xs-center">For Hire</h1>
-							<div class="subheading mb-3 text-xs-center">Have help at your door within minutes.</div>
-								<v-container grid-list-xl align-center class="accessButtons">
-									<v-btn class="blue lighten-2 mt-5" align-center dark large href="" id="find-help">
-										Find Help
-									</v-btn>
-									<v-btn class="blue lighten-2 mt-5" align-center dark large href="/pre-made-themes" id="sign-up">
-										Sign up to Help
-									</v-btn>
-								</v-container>
-						
-						</v-layout>
-					<!-- </v-parallax> -->
-				</section>
+<div id="app">
+	<v-app light>
+		<v-toolbar class="white">
+			<v-toolbar-title v-text="title"></v-toolbar-title>
+		</v-toolbar>
+		<v-content>
+			<section class="homepage">
+				<!-- <v-parallax src="assets/images/background.png" height="900"> -->
+				<v-layout column align-center justify-center class="white--text">
+					<img src="assets/images/FHogo.png" alt="For Hire Logo" height="200">
+					<h1 class="white--text mb-2 display-1 text-xs-center">For Hire</h1>
+					<div class="subheading mb-3 text-xs-center">Have help at your door within minutes.</div>
+					<v-container grid-list-xl align-center class="accessButtons">
+						<v-btn class="blue lighten-2 mt-5" align-center dark large href="" id="find-help">
+							Find Help
+						</v-btn>
+						<v-btn class="blue lighten-2 mt-5" align-center dark large href="/pre-made-themes" id="sign-up">
+							Sign up to Help
+						</v-btn>
+					</v-container>
 
-				
-					<v-footer class="pa-3">
-						<v-spacer></v-spacer>
-						<div>© {{ new Date().getFullYear() }}</div>
-					</v-footer>
-				
-			</v-content>
-		</v-app>
-	</div>
+				</v-layout>
+				<!-- </v-parallax> -->
+			</section>
+
+
+			<v-footer class="pa-3">
+				<v-spacer></v-spacer>
+				<div>© {{ new Date().getFullYear() }}</div>
+			</v-footer>
+
+		</v-content>
+	</v-app>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script>
+	new Vue({
+		el: '#app',
+		data() {
+			return {
+				title: 'Your Logo'
+			}
+		}
+	})
+</script>
