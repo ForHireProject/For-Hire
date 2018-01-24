@@ -11,37 +11,63 @@
 </ul>
 
 
-{{!-- 
-<div id="app">
-    <v-app>
-        <v-content>
-            <v-container>
-                <template>
-                    <v-expansion-panel>
-                        <v-expansion-panel-content v-for="(item,i)" :key="i">
-                            <div slot="header">Name Place Holder</div>
-                            <v-card>
-                                <v-card-text class="grey lighten-3">
-                                    <img src="assets/images/worker.jpeg" alt="For Hire Logo" height="200"> Text Place holder
+{<div class="row">
+        <div class="col s12 m3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/panda.jpeg">
+                    <span id="workerName" class="card-title">John Smith</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light green">
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p id="skill">Skill: </p>
+                    <p id="zipcode">Zipcode: </p>
+                    <p id="phone">Phone: </p>
+                    <p id="email">Email: </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                    <div class="text-xs-center">
-                                        <v-btn outline color="indigo">Hire Me</v-btn>
 
-                                    </div>
 
-                                </v-card-text>
-                            </v-card>
-                        </v-expansion-panel-content>
-                    </v-expansion-panel>
-                </template>
 
-            </v-container>
-        </v-content>
-    </v-app>
-</div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
-<script>
-    new Vue({ el: '#app' })
-</script> --}}
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>

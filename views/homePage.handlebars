@@ -1,46 +1,65 @@
-<div id="app">
-	<v-app light>
-		<v-toolbar class="white">
-			<v-toolbar-title v-text="title"></v-toolbar-title>
-		</v-toolbar>
-		<v-content>
-			<section class="homepage">
-				<!-- <v-parallax src="assets/images/background.png" height="900"> -->
-				<v-layout column align-center justify-center class="white--text">
-					<img src="assets/images/FHogo.png" alt="For Hire Logo" height="200">
-					<h1 class="white--text mb-2 display-1 text-xs-center">For Hire</h1>
-					<div class="subheading mb-3 text-xs-center">Have help at your door within minutes.</div>
-					<v-container grid-list-xl align-center class="accessButtons">
-						<v-btn class="blue lighten-2 mt-5" align-center dark large href="" id="find-help">
-							Find Help
-						</v-btn>
-						<v-btn class="blue lighten-2 mt-5" align-center dark large href="/pre-made-themes" id="sign-up">
-							Sign up to Help
-						</v-btn>
-					</v-container>
+<button class="waves-effect waves-light btn" id="findHelp" type="submit" name="action" width="100">Find Help
+    <i class="material-icons right">send</i>
+</button>
 
-				</v-layout>
-				<!-- </v-parallax> -->
-			</section>
+<button class="waves-effect waves-light btn" id="signUp" type="submit" name="action" width="100">Sign up to Help
+    <i class="material-icons right">send</i>
+</button>
 
 
-			<v-footer class="pa-3">
-				<v-spacer></v-spacer>
-				<div>© {{ new Date().getFullYear() }}</div>
-			</v-footer>
-
-		</v-content>
-	</v-app>
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="assets/images/hero.jpeg">
+    </div>
 </div>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
-<script>
-	new Vue({
-		el: '#app',
-		data() {
-			return {
-				title: 'Your Logo'
-			}
-		}
-	})
-</script>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the
+            foreground content while scrolling.</p>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="assets/images/hero.jpeg">
+    </div>
+</div> 
+
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
