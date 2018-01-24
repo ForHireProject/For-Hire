@@ -43,9 +43,9 @@ module.exports = function (sequelize, DataTypes) {
             freezeTableName: true
     });
     
-    sequelize.sync({
-        //force: true
-    })
+    // sequelize.sync({
+    //     force: true
+    // })
     
     // .then(function () {
     //     Worker.create({
