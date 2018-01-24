@@ -1,64 +1,64 @@
-<div id="app">
-    <v-app>
-        <v-content>
-            <section>
-                <v-layout>
-                    <v-flex xs12 sm3 offset-sm1>
-                        <v-card>
-                            <a href="workers.html">
-                                <v-card-media class="white--text" height="200px" src="assets/images/handyman.jpeg">
-                            </a>
-                            <v-container fill-height fluid>
-                                <v-layout fill-height>
-                                    <v-flex xs12 align-end flexbox>
-                                        <span class="headline">HANDYMAN</span>
-                                    </v-flex>
-                                </v-layout>
-                            </v-container>
-                            </v-card-media>
-                        </v-card>
-                    </v-flex>
+{{!-- <script src="../assets/css/style.css"></script> --}}
 
-                    <v-flex xs12 sm3 offset-sm1>
-                        <v-card>
-                            <a href="workers.html">
-                                <v-card-media class="white--text" height="200px" src="assets/images/childcare.jpg">
-                            </a>
-                            <v-container fill-height fluid>
-                                <v-layout fill-height>
-                                    <v-flex xs12 align-end flexbox>
-                                        <span class="headline">CHILD CARE</span>
-                                    </v-flex>
-                                </v-layout>
-                            </v-container>
-                            </v-card-media>
-                        </v-card>
-                    </v-flex>
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-                    <v-flex xs12 sm3 offset-sm1>
-                        <v-card>
-                            <a href="workers.html">
-                                <v-card-media class="white--text" height="200px" src="assets/images/chef.jpeg">
-                            </a>
-                            <v-container fill-height fluid>
-                                <v-layout fill-height>
-                                    <v-flex xs12 align-end flexbox>
-                                        <span class="headline">CHEF</span>
-                                    </v-flex>
-                                </v-layout>
-                            </v-container>
-                            </v-card-media>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
-            </section>
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
 
-        </v-content>
-    </v-app>
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+</style>
+
+<div class="dropdown">
+    <span>Service Sector</span>
+    <div class="dropdown-content">
+         {{#each test}}
+          {{#if service}}
+                <p>category: {{this.service}}</p>
+            {{/if}}
+         {{/each}}
+    </div>
 </div>
 
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
-<script>
-    new Vue({ el: '#app' })
-</script>
+<div class="dropdown">
+    <span>Industrial Sector</span>
+    <div class="dropdown-content">
+        {{#each category}}
+        <p>category: {{this}}</p>
+        {{/each}}
+    </div>
+</div>
+
+<div class="dropdown">
+    <span>Mechanic Sector</span>
+    <div class="dropdown-content">
+        {{#each category}}
+        <p>category: {{this}}</p>
+        {{/each}}
+    </div>
+</div>
+
+<div class="dropdown">
+    <span>Construction Sector</span>
+    <div class="dropdown-content">
+        {{#each category}}
+        <p>category: {{this}}</p>
+        {{/each}}
+    </div>
+</div>
+
+
+   
