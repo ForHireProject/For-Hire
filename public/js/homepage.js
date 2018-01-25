@@ -7,10 +7,10 @@
 
 // When we click FIND HELP we should see the dummy accounts that Kane provided.
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	$("#find-help").on("click", function(){
-		console.log("test response");
-	});
+// 	$("#find-help").on("click", function(){
+// 		console.log("test response");
+// 	});
 
-});
+// });

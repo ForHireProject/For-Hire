@@ -3,9 +3,13 @@
 
 
 {{!-- NOTE: IMAGES MUST HAVE SAME SIZES SO THAT IT DOESNT AFFECT THE SIZE OF MATERIALIZE CARDS --}}
+<<<<<<< HEAD
+{{!-- PLEASE FEEL FREE TO REPLACE DUMMY IMAGE.  JUST KEEP IN MIND SIZES.  I CHOSE 500 X 500 BELOW --}}
+=======
 =======
 
 
+>>>>>>> master
 
 <div class="row">
 
@@ -28,17 +32,53 @@
                     <span class="card-title grey-text text-darken-4">Available Services:
                         <i class="material-icons right">close</i>
                     </span>
-                        {{#each category}}
-                            <a><button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100"> 
-                                <p>service: {{service}}</p>
-                                <i class="material-icons right">build</i>
-                            </button></a>
-                        {{/each}}
+                        
+                            <a>
+                                <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100"> 
+                                    <p>service: 
+                                        {{#each category}}
+
+                                            {{category}}
+                                            {{!-- {{#unless availability}} 
+                                               {{> forHire/forHire-block}} 
+                                            {{/unless}} --}}
+                                        {{/each}}
+                                    </p>
+                                </button>
+                            </a>
+                        
                 </div>
             </div>
         </div>
     
         {{!-- second --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
             <div class="col s12 m3">
                 <div class="card">
@@ -60,7 +100,7 @@
                         {{#each category}}
                         <a>
                             <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">
-                                <p>service: {{service}}</p>
+                                <p>Available to Work: {{service}}</p>
                                 <i class="material-icons right">build</i>
                             </button>
                         </a>
@@ -105,7 +145,7 @@
             <div class="col s12 m3">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="assets/images/construction.jpg">
+                        <img class="activator" src="assets/images/industrial.jpg">
                     </div>
                     <div class="card-content">
                         <span id="cardTitle" class="card-title activator grey-text text-darken-4">Industrial
@@ -136,7 +176,7 @@
     
     {{!-- home button --}}
     <form action="/homePage" method="GET">
-        <button class="waves-effect waves-light btn" id="findHelp" type="submit" name="action" width="100">Home
+        <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Home
             <i class="material-icons right">send</i>
         </button>
     </form>
