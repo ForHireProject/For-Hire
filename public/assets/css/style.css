@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 
 span {
     background-repeat: no-repeat;
     padding: 0;
     margin: 25px;
 }   
-=======
 .parallax-container {
       height: "your height here";
     }
@@ -19,4 +17,31 @@ span {
   main {
     flex: 1 0 auto;
   } */
->>>>>>> master
+
+  .btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: hsl(209, 69%, 42%);
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 144px;
+    margin: 3px;
+}
+/* navigation buttons */
+#findHelp {
+    height: 44px;
+    color: white
+}
+/* customize this alert */
+span.badge.new:after {
+    content: " NEW helper!";
+}
+span.badge.new {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: hsl(0, 80%, 43%);
+    border-radius: 2px;
+}

@@ -1,76 +1,19 @@
 
-{{!-- <style>
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
-        z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    
-</style> --}}
-
-<a href="/homePage">Home</a>
-{{!-- 
 
 
-<div class="dropdown">
-    <span>Service Sector</span>
-    <div class="dropdown-content">
-        {{#each category}}
-            <p>service: {{service}}</p>
-        {{/each}}
-    </div>
-</div>
-<div class="dropdown">
-    <span>Industrial Sector</span>
-    <div class="dropdown-content">
-        {{#each category}}
-        <p>service: {{service}}</p>
-        {{/each}}
-    </div>
-</div>
-
-<div class="dropdown">
-    <span>Mechanic Sector</span>
-    <div class="dropdown-content">
-        {{#each category}}
-            <p>category: {{service}}</p>
-        {{/each}}
-    </div>
-</div>
-
-<div class="dropdown">
-    <span>Construction Sector</span>
-    <div class="dropdown-content">
-        {{#each category}}
-        <p>category: {{this}}</p>
-        {{/each}}
-    </div>
-</div> --}}
-
-
-   
+{{!-- NOTE: IMAGES MUST HAVE SAME SIZES SO THAT IT DOESNT AFFECT THE SIZE OF MATERIALIZE CARDS --}}
 
 <div class="row">
+
+     {{!-- first card --}}
+    
         <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/images/handyman.jpeg">
+                    <img class="activator" src="assets/images/construction.jpg">
                 </div>
                 <div class="card-content">
-                    <span id="cardTitle" class="card-title activator grey-text text-darken-4">Handyman
+                    <span id="cardTitle" class="card-title activator grey-text text-darken-4">Construction
                         <i class="material-icons right">more_vert</i>
                     </span>
                     <!-- <p>
@@ -81,68 +24,120 @@
                     <span class="card-title grey-text text-darken-4">Available Services:
                         <i class="material-icons right">close</i>
                     </span>
-                         {{#each category}}
+                        {{#each category}}
                             <a><button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100"> 
                                 <p>service: {{service}}</p>
                                 <i class="material-icons right">build</i>
-                             </button></a>
-                     {{/each}}
+                            </button></a>
+                        {{/each}}
                 </div>
             </div>
         </div>
-
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/images/childcare.jpg">
-                </div>
-                <div class="card-content">
-                    <span id="cardTitle" class="card-title activator grey-text text-darken-4">Child Care
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                    <!-- <p>
+    
+        {{!-- second --}}
+        
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/child-care.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span id="cardTitle" class="card-title activator grey-text text-darken-4">Service
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <!-- <p>
                                 <a href="#">This is a link</a>
                             </p> -->
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Avaiable Services:
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <a>
-                        <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">Nanny
-                            <i class="material-icons right">child_care</i>
-                        </button>
-                    </a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Available Services:
+                            <i class="material-icons right">close</i>
+                        </span>
+                        {{#each category}}
+                        <a>
+                            <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">
+                                <p>service: {{service}}</p>
+                                <i class="material-icons right">build</i>
+                            </button>
+                        </a>
+                    {{/each}}
                 </div>
             </div>
         </div>
+    
+        {{!-- third --}}
+        
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/mechanic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span id="cardTitle" class="card-title activator grey-text text-darken-4">Mechanical
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <!-- <p>
+                                <a href="#">This is a link</a>
+                            </p> -->
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Available Services:
+                            <i class="material-icons right">close</i>
+                        </span>
+                        {{#each category}}
+                        <a>
+                            <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">
+                                <p>service: {{service}}</p>
+                                <i class="material-icons right">build</i>
+                            </button>
+                        </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+  
+        {{!-- fourth --}}
+        
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/construction.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span id="cardTitle" class="card-title activator grey-text text-darken-4">Industrial
+                            <i class="material-icons right">more_vert</i>
+                        </span>
+                        <!-- <p>
+                                <a href="#">This is a link</a>
+                            </p> -->
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Available Services:
+                            <i class="material-icons right">close</i>
+                        </span>
+                        {{#each category}}
+                        <a>
+                            <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">
+                                <p>service: {{service}}</p>
+                                <i class="material-icons right">build</i>
+                            </button>
+                        </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    
+    </div>{{!--row end --}}
 
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/images/chef.jpeg">
-                </div>
-                <div class="card-content">
-                    <span id="cardTitle" class="card-title activator grey-text text-darken-4">Chef
-                        <i class="material-icons right">more_vert</i>
-                    </span>
-                    <!-- <p>
-                                        <a href="#">This is a link</a>
-                                    </p> -->
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Avaiable Services:
-                        <i class="material-icons right">close</i>
-                    </span>
-                    <a>
-                        <button class="waves-effect waves-light btn" id="service1" type="submit" name="action" width="100">Chef
-                            <i class="material-icons right">accessibility</i>
-                        </button>
-                    </a>
-                </div>`
-            </div>
-        </div>
-    </div>
+    
+    {{!-- home button --}}
+    <form action="/homePage" method="GET">
+        <button class="waves-effect waves-light btn" id="findHelp" type="submit" name="action" width="100">Home
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+
+    
 
 
     
