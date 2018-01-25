@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 span {
     background-repeat: no-repeat;
     padding: 0;
     margin: 25px;
 }   
+=======
+.parallax-container {
+      height: "your height here";
+    }
+
+ /* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  } */
+>>>>>>> master
