@@ -8,18 +8,7 @@ module.exports = function (app) {
 
 
 
-    // GET all workers
-    app.get("/workers", function (req, res) {
-        console.log("working");
-        db.Worker.findAll({}).then(function (data) {
-            var hbsObject = {
-                workers: data
-            };
-            console.log("THIS IS workers DATA ===>", hbsObject);
-            res.render("workers", hbsObject)
-        })
-    });
-
+    
     // GET all workers
     app.get("/homePage", function (req, res) {
         console.log("working");
@@ -31,6 +20,7 @@ module.exports = function (app) {
             res.render("homePage", hbsObject)
         })
     });
+
 
     // GET sign-up form
     app.get("/forHireForm", function (req, res) {
