@@ -1,20 +1,25 @@
-<h1>Home Page</h1>
+
+
+
+{{!-- some header --}}
+<div class="collection">
+    <a href="#!" class="collection-item">
+        {{!-- increment when new serice is available --}}
+        <span class="new badge">4</span>
+        <h1>FOR HIRE</h1></a>
+</div>
+
+{{!-- navigational buttons --}}
 
 
 <form action="/category" method="GET">
-    <button class="waves-effect waves-light btn" id="findHelp" type="submit" name="action" width="100">Find Help
+    <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Find Help
         <i class="material-icons right">send</i>
     </button>
 </form> 
 
 <form action="/forHireForm" method="GET">
-    <button class="waves-effect waves-light btn" id="signUp" type="submit" name="action" width="100">Sign up to Help
-        <i class="material-icons right">send</i>
-    </button>
-</form>
-
-<form action="/homePage" method="GET">
-    <button class="waves-effect waves-light btn" id="signUp" type="submit" name="action" width="100">Home
+    <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Sign up to Help
         <i class="material-icons right">send</i>
     </button>
 </form>
@@ -22,7 +27,7 @@
 
 
 
-
+{{!-- some container for body content --}}
 
 <div class="parallax-container">
     <div class="parallax">
