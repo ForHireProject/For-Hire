@@ -55,11 +55,8 @@ module.exports = function (sequelize, DataTypes) {
     });
     
     // sequelize.sync({
-<<<<<<< HEAD
     //     //force: true
-=======
     //     force: true
->>>>>>> master
     // })
     
     // .then(function () {
