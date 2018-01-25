@@ -1,10 +1,10 @@
-$(document).ready(function () {
-    
-    
+// PSEUDO CODE:
+//1. Add data id to rendered available service/helper
+//2. When a service is clicked
+//3. Go to page that arranges up a meet-up with service/helper
+//4. Alert the service/helper that they have been selected
 
-        // $(".headline").on('click', function (event) {
-        //     event.preventDefault();
-        //     $(this).parent().find('ul').first().toggle(300);
-        //     $(this).parent().siblings().find('ul').hide(200);
-        // });
+//function wrapper 
+$(function () {
+  
 });
