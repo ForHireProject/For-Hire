@@ -6,6 +6,7 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
+<<<<<<< HEAD
     // GET all workers
     app.get("/workers", function (req, res) {
         console.log("working");
@@ -32,6 +33,12 @@ module.exports = function (app) {
     });
 
     // GET route - homePage
+=======
+
+
+    
+    // GET all workers
+>>>>>>> master
     app.get("/homePage", function (req, res) {
         console.log("working");
         db.Worker.findAll({}).then(function (data) {
@@ -43,7 +50,12 @@ module.exports = function (app) {
         })
     });
 
+<<<<<<< HEAD
     // GET route sign-up form
+=======
+
+    // GET sign-up form
+>>>>>>> master
     app.get("/forHireForm", function (req, res) {
             res.render("forHireForm")
     });
