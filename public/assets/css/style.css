@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+
+span {
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 25px;
+}   
+=======
 .parallax-container {
       height: "your height here";
     }
@@ -11,3 +19,4 @@
   main {
     flex: 1 0 auto;
   } */
+>>>>>>> master
