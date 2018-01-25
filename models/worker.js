@@ -64,8 +64,8 @@ module.exports = function (sequelize, DataTypes) {
     //         zip_code: 27531,
     //         email: "sam@mail.com",
     //         phone: "(345)-434-3124",
-    //         service: "Auto-Mechanic",
-    //         category: "Mechanic",
+    //         service: "Automobile",
+    //         category: "Mechanical",
     //         availability: true
     //     }),
     //     Worker.create({
@@ -89,7 +89,7 @@ module.exports = function (sequelize, DataTypes) {
     //     Worker.create({
     //         name: "Mike",
     //         zip_code: 27533,
-    //         email: "josh@mail.com",
+    //         email: "meek@mail.com",
     //         phone: "(233)-222-1222",
     //         service: "Painter",
     //         category: "Construction",
@@ -107,7 +107,7 @@ module.exports = function (sequelize, DataTypes) {
     //     Worker.create({
     //         name: "Will",
     //         zip_code: 54323,
-    //         email: "josh@mail.com",
+    //         email: "willie@mail.com",
     //         phone: "(232)-909-8989",
     //         service: "Cook",
     //         category: "Service",
@@ -116,7 +116,7 @@ module.exports = function (sequelize, DataTypes) {
     //     Worker.create({
     //         name: "Michelle",
     //         zip_code: 27400,
-    //         email: "janna@mail.com",
+    //         email: "mit@mail.com",
     //         phone: "(212)-333-3144",
     //         service: "Dog walker",
     //         category: "Service",
@@ -125,7 +125,7 @@ module.exports = function (sequelize, DataTypes) {
     //     Worker.create({
     //         name: "Carmela",
     //         zip_code: 23004,
-    //         email: "josh@mail.com",
+    //         email: "car@mail.com",
     //         phone: "(233)-222-1222",
     //         service: "Carpentry",
     //         category: "Construction",
@@ -136,8 +136,8 @@ module.exports = function (sequelize, DataTypes) {
     //         zip_code: 27533,
     //         email: "jordan@mail.com",
     //         phone: "(345)-434-3124",
-    //         service: "Auto-Mechanic",
-    //         category: "Mechanic",
+    //         service: "Automobile",
+    //         category: "Mechanical",
     //         availability: true
     //     }),
     //     Worker.create({
@@ -168,6 +168,6 @@ module.exports = function (sequelize, DataTypes) {
     //         availability: true
     //     })
 
-    //})
+    // })
     return Worker;
 }
