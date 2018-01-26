@@ -47,12 +47,7 @@ module.exports = function (app) {
         })
     });
 
-<<<<<<< HEAD
-    // GET route sign-up form
-=======
-
-    // GET sign-up form
->>>>>>> master
+    
     app.get("/forHireForm", function (req, res) {
             res.render("forHireForm")
     });
