@@ -7,18 +7,13 @@ var db = require("../models");
 module.exports = function (app) {
 
     // GET all workers
-    app.get("/workersList", function (req, res) {
-        console.log("working");
-        db.Worker.findAll({})
-        //render portion of the code, create logic to filter whats DATA is rendered
+    app.get("/workersList/:service", function (req, res) {
+        db.Worker.findAll({where: {Service: req.params.service}})
         .then(function (data) {
-        //   the connection to to handlebars
-            var hbsObject = {
-                workers:  data
-            };
-            console.log("hbsObject SUCCESS", data);
+            var hbsObject = {workers: data};
+            console.log(hbsObject);
             res.render("workersList", hbsObject)
-        })
+        });
     });
 
     // GET route - homePage
@@ -42,11 +37,10 @@ module.exports = function (app) {
         res.render("servicesList");
     });
 
-    app.get("/*", function (req, res) {
-        res.render("homePage");
-    });
-    
-
+    // app.get("/*", function (req, res) {
+    //     res.render("homePage");
+    // });
+     
 
   //NEW USER info after sign-up, ADD to DATABASE
     app.post("/api/new", function (req, res) {
@@ -69,9 +63,8 @@ module.exports = function (app) {
             phone: newWorker.phone,
             service: newWorker.service
         });
-    });  
-    
-}
+    });
+    };
 // section for left over testing stuff or local stuff. Will clean later before we ship.
 
 
