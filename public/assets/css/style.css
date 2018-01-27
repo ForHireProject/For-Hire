@@ -1,4 +1,4 @@
-Homepage*/
+/* Homepage*/ 
 
 /* Container holding the image and the text */
 .container {
@@ -10,37 +10,25 @@ Homepage*/
 /* Bottom left text */
 .bottom-left {
     position: absolute;
-    bottom: 8px;
-    left: 16px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
 }
 
 /* Top left text */
 .top-left {
     position: absolute;
-    top: 8px;
-    left: 16px;
-}
-
-/* Top right text */
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-}
-
-/* Centered text */
-.centered {
-    position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
+}
+
+.container{
+    width: 100%;
+}
+
+#collage{
+    opacity: .7;
 }
 
 
