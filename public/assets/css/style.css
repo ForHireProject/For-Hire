@@ -8,7 +8,7 @@ span {
       height: "your height here";
     }
 
- body {
+ /* body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -16,19 +16,9 @@ span {
 
   main {
     flex: 1 0 auto;
-  }
+  } */
 
-  .btn, .btn-large {
-    text-decoration: none;
-    color: #fff;
-    background-color: hsl(209, 69%, 42%);
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-    height: 144px;
-    margin: 3px;
-}
+
 /* navigation buttons */
 #findHelp {
     height: 44px;
@@ -49,4 +39,12 @@ span.badge.new {
 .developed-by {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.page-title {
+    font-size: 72px;
+}
+
+.top-nav {
+    height: 110px;
 }
