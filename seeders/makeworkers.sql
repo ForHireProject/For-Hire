@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS for_hire;
 CREATE DATABASE for_hire;
 
 -- try to insert this to SQL PRO and INPUT THIS SINGLE DATA
-INSERT INTO `Worker` (`id`,`name`,`zip_code`,`email`,`phone`,`service`) VALUES (DEFAULT,"Henry Webster","23810","fringilla@mollislectus.org","(447) 962-4448","Customer Service", DATE);
+INSERT INTO `Worker` (`id`,`name`,`zip_code`,`email`,`phone`,`service`) VALUES (,"Henry Webster","23810","fringilla@mollislectus.org","(447) 962-4448","Customer Service");
 
 -- I comment out the large data below
 

@@ -38,6 +38,10 @@ module.exports = function (app) {
             res.render("signupForm")
     });
 
+    app.get("/*", function (req, res) {
+        res.render("homePage")
+});
+
     
 
   // NEW USER info after sign-up, ADD to DATABASE
