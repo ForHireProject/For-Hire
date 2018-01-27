@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 <div class="container">
     {{!-- form action --}}
     <form action="/api/new" method="POST" role="form">
-    {{!--  --}}
+
     <div class="row">
         <form class="col s12">
             <div class="row">
@@ -11,19 +10,9 @@
                     <input id="icon_prefix" type="text" class="validate">
                     <label for="icon_prefix">Name</label>
                 </div>
-=======
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Name</label>
->>>>>>> master
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 
 <div class="row">
     <form class="col s12">
@@ -61,19 +50,16 @@
     </form>
 </div>
 
-<<<<<<< HEAD
     {{!-- <script>
         $(document).ready(function () {
             $('select').material_select();
         });
     </script> --}}
-=======
 <script>
     $(document).ready(function () {
         $('select').material_select();
     });
 </script>
->>>>>>> master
 
 <div class="row">
     <form class="col s12">
@@ -81,10 +67,16 @@
             <i class="material-icons prefix">subdirectory_arrow_right</i>
             <label>Select Skill</label>
             <select>
-                <option value="" disabled selected></option>
-                <option value="1">Handyman</option>
-                <option value="2">Child Care</option>
-                <option value="3">Chef</option>
+                <option value="" disabled selected>Choose your option</option>
+                <option class="service" value="1">Customer Service</option>
+                <option class="service" value="2">Handy Work</option>
+                <option class="service" value="3">Culinary</option>
+                <option class="service" value="4">Legal</option>
+                <option class="service" value="5">Media</option>
+                <option class="service" value="6">Real Estate</option>
+                <option class="service" value="7">Education</option>
+                <option class="service" value="8">Finance</option>
+                <option class="service" value="9">Technology</option>
             </select>
         </div>
     </form>
@@ -101,26 +93,23 @@
                 <input class="file-path validate" type="text">
             </div>
         </div>
-<<<<<<< HEAD
     </form> --}}
      <label>Browser Select</label>
         <select class="browser-default">
             <option value="" disabled selected>Choose your option</option>
-            <option id="service" value="1">Customer Service</option>
-            <option id="service" value="2">Handy Work</option>
-            <option id="service" value="3">Culinary</option>
-            <option id="service" value="4">Legal</option>
-            <option id="service" value="5">Media</option>
-            <option id="service" value="6">Real Estate</option>
-            <option id="service" value="7">Education</option>
-            <option id="service" value="8">Finance</option>
-            <option id="service" value="9">Technology</option>
+            <option class="service" value="1">Customer Service</option>
+            <option class="service" value="2">Handy Work</option>
+            <option class="service" value="3">Culinary</option>
+            <option class="service" value="4">Legal</option>
+            <option class="service" value="5">Media</option>
+            <option class="service" value="6">Real Estate</option>
+            <option class="service" value="7">Education</option>
+            <option class="service" value="8">Finance</option>
+            <option class="service" value="9">Technology</option>
         </select>
     {{!-- form action --}}
     </form>
-=======
     </form>  -->
->>>>>>> master
 
 </div>
 
@@ -143,22 +132,13 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
-
-<<<<<<< HEAD
-    {{!-- <script>
-        $(document).ready(function () {
-            $('select').material_select();
-        });
-    </script> --}}
-=======
 <script>
     $(document).ready(function () {
         $('select').material_select();
     });
-<<<<<<< HEAD
+
 </script>
->>>>>>> master
-=======
+
       $('.modal').modal({
       dismissible: false, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
@@ -169,4 +149,4 @@
     }
   );
 </script>
->>>>>>> master
+
