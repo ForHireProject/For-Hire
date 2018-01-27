@@ -14,10 +14,10 @@ module.exports = function (app) {
         .then(function (data) {
         //   the connection to to handlebars
             var hbsObject = {
-                workers: canWork
+                workers:  data
             };
-            console.log("hbsObject SUCCESS", canWork);
-            res.render("workers", hbsObject)
+            console.log("hbsObject SUCCESS", data);
+            res.render("workersList", hbsObject)
         })
     });
 
