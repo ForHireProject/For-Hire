@@ -56,15 +56,14 @@ span {
     margin: 25px;
 }   
 
+
 /* body {
+
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
-    flex: 1 0 auto;
-  }*/
 
 
 /* customize this alert */
@@ -85,14 +84,12 @@ span.badge.new {
     margin-bottom: 0px;
 }
 
-/*Messes with footer and formatting*/
 
-/* body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+.page-title {
+    font-size: 72px;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+.top-nav {
+    height: 110px;
+}
+
