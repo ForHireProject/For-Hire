@@ -1,29 +1,71 @@
+Homepage*/
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
 
 span {
     background-repeat: no-repeat;
     padding: 0;
     margin: 25px;
 }   
-.parallax-container {
-      height: "your height here";
-    }
 
- /* body {
+
+/* body {
+
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
-    flex: 1 0 auto;
-  } */
 
 
-/* navigation buttons */
-#findHelp {
-    height: 44px;
-    color: white
-}
 /* customize this alert */
 span.badge.new:after {
     content: " NEW helper!";
@@ -36,10 +78,12 @@ span.badge.new {
     border-radius: 2px;
 }
 
+/*Footer*/
 .developed-by {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 
 .page-title {
     font-size: 72px;
@@ -48,3 +92,4 @@ span.badge.new {
 .top-nav {
     height: 110px;
 }
+

@@ -1,5 +1,13 @@
 
 
+<div class="container">
+    <img src="assets/images/collage.jpeg" alt="Norway" style="width:100%;">
+    <div class="bottom-left">
+        <form action="/category" method="GET">
+        <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Find Help
+            <i class="material-icons right">send</i>
+        </button>
+        </form>
 
 {{!-- some header --}}
 <div class="collection">
@@ -15,13 +23,13 @@
 {{!-- navigational buttons --}}
 
 
-<form action="/category" method="GET">
+<form action="/workersList" method="GET">
     <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Find Help
         <i class="material-icons right">send</i>
     </button>
 </form> 
 
-<form action="/forHireForm" method="GET">
+<form action="/signupForm" method="GET">
     <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Sign up to Help
         <i class="material-icons right">send</i>
     </button>
@@ -33,20 +41,16 @@
 <div class="parallax-container">
     <div class="parallax">
         <img src="assets/images/hero.jpeg">
+
+    </div>
+    <div class="top-left">
+        <form action="/forHireForm" method="GET">
+        <button class="waves-effect waves-light btn NAVIGATE" id="signup" type="submit" name="action" width="100">Sign up to Help
+            <i class="material-icons right">send</i>
+        </button>
+        </form>
     </div>
 </div>
-<div class="section white">
-    <div class="row container">
-        <h2 class="header">Parallax</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the
-            foreground content while scrolling.</p>
-    </div>
-</div>
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="assets/images/hero.jpeg">
-    </div>
-</div> 
 
 
 
