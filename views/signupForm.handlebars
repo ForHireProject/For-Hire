@@ -1,6 +1,6 @@
 <div class="container">
     {{!-- form action --}}
-     <form action="/api/new" method="POST" role="form">
+    <form action="/api/new" method="POST" role="form">
     {{!--  --}}
     <div class="row">
         <form class="col s12">
@@ -50,11 +50,11 @@
         </form>
     </div>
 
-    <script>
+    {{!-- <script>
         $(document).ready(function () {
             $('select').material_select();
         });
-    </script>
+    </script> --}}
 
         <div class="row">
             <form class="col s12">
@@ -83,6 +83,21 @@
             </div>
         </div>
     </form> --}}
+     <label>Browser Select</label>
+        <select class="browser-default">
+            <option value="" disabled selected>Choose your option</option>
+            <option id="service" value="1">Customer Service</option>
+            <option id="service" value="2">Handy Work</option>
+            <option id="service" value="3">Culinary</option>
+            <option id="service" value="4">Legal</option>
+            <option id="service" value="5">Media</option>
+            <option id="service" value="6">Real Estate</option>
+            <option id="service" value="7">Education</option>
+            <option id="service" value="8">Finance</option>
+            <option id="service" value="9">Technology</option>
+        </select>
+    {{!-- form action --}}
+    </form>
 
     <button id="formSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
@@ -96,8 +111,8 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 
-    <script>
+    {{!-- <script>
         $(document).ready(function () {
             $('select').material_select();
         });
-    </script>
+    </script> --}}
