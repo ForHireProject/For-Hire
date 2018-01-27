@@ -35,16 +35,20 @@ module.exports = function (app) {
 
     //GET sign-up form
     app.get("/signupForm", function (req, res) {
-            res.render("signupForm")
+            res.render("signupForm");
+    });
+
+    app.get("/servicesList", function(req, res) {
+        res.render("servicesList");
     });
 
     app.get("/*", function (req, res) {
-        res.render("homePage")
-});
-
+        res.render("homePage");
+    });
     
 
-  // NEW USER info after sign-up, ADD to DATABASE
+
+  //NEW USER info after sign-up, ADD to DATABASE
     app.post("/api/new", function (req, res) {
         // Take the request...
         var newWorker = req.body;
