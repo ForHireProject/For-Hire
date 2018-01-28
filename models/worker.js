@@ -1,22 +1,32 @@
+var validator = require('validator');
+
 module.exports = function (sequelize, DataTypes) {
 
     var Worker = sequelize.define("Worker", {
 
         name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                isAlpha: { msg: "--<@@@@@@ NO NUMBERS @@@@@@>--"}
+                } 
         },
+        
         zip_code: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: { 
+                isPostalCode: { 
+                    args: [['CA']], 
+                    msg: "--<@@@@@@ NOT A VALID CALIFORNIA POSTAL CODE @@@@@@>--" 
+                    }
+            }
         },
         email: {
             type: DataTypes.STRING,
             isUnique: true,
             allowNull: false,
-            validate: {
-                isEmail: true
-            }
+            validator: { isEmail: true }
         },
         phone: {
             type: DataTypes.STRING,
@@ -25,9 +35,7 @@ module.exports = function (sequelize, DataTypes) {
         service: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
+            validate: {len: [1] }
         },
         date: {
             type: DataTypes.DATE,
