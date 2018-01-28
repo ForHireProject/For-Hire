@@ -12,7 +12,7 @@ $(document).ready(function () {
       // name from name input
       name: $(".inputName").val().trim(),
       // zip-code from input
-      zipcode: $(".inputZipcode").val().trim(),
+      zip_code: $(".inputZipcode").val().trim(),
       // email from input
       email: $(".inputEmail").val().trim(),
       // phone from input
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     console.log(newWorker);
     // send an AJAX POST-request with jQuery
-    $.post("/api/new", newWorker)
+    $.post("/api/posts", newWorker)
       // on success, run this callback
       .then(function (data) {
         // log the data we found
@@ -32,11 +32,11 @@ $(document).ready(function () {
         // tell the user we're adding a newWorker with an alert window
         alert("Adding newWorker...");
       });
-    // empty each input box by replacing the value with an empty string
-    $("#name").val("");
-    $("#zipCode").val("");
-    $("#email").val("");
-    $("#telephone").val("");
-    $("#service").val("");
+
+      $(".inputName").val(""),
+      $(".inputZipcode").val(""),
+      $(".inputEmail").val(""),
+      $(".inputPhone").val(""),
+      $("#inputService").val("")
   });
 });
