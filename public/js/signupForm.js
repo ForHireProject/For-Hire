@@ -7,7 +7,7 @@ $(document).ready(function () {
     
     console.log("Adding newWorker...");
 
-    // make a newWorker obj
+    // make a newWorker obj NOTE: THIS IS MYSQL MODEL EQUIVALENT, SO MAKE SURE EACH PROPERTY MATCHES THE MODEL
     var newWorker = {
       // name from name input
       name: $(".inputName").val().trim(),
