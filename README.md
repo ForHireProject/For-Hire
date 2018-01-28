@@ -3,28 +3,58 @@
 For-Hire is a technology platform. Our apps connect freelance workers and 
 clients in need of specific service. In cities where For-Hire operates, use your app to request a service. When a nearby freelance workers accepts your request, your app displays an estimated time of arrival for the freelance workers heading to your location.
 
-#### Some Info Here
+## Motivation
+We all neee a little help from time to time. But where do you find qualified help, quickly and effectively? We designed an app for just that. If I'm having company over Saturday night and need the house cleaned, food cooked, or the toilet fixed I can find all the right people for the job with this app and schedule their time around MY time frame.
 
-This is a table:
+## Build status
+The app is up and works in all zip-codes. With the launch and getting workers to sign up, the app will grow quickly in your area. As we grow we want to expand the possible services listed as we would like to provide more options for the clients, and more possabilities for the workers. We have achieved our MVP model and have many intergration ideas in the works to improve easability and customization. 
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+Some of these ideas include
+- ranking system
+- user profile and service tracking
+- integrated payment system for exhchange of services 
+- LIVE tracking of workers in your area. For those emergency times where you need something RIGHT NOW! Show people on a live map and connect to them right now.
+ 
+## Screenshots
+<!-- Include logo/demo screenshot etc. -->
 
-----
+## Tech/framework used
 
-### A sample data 
+<b>Built with</b>
+- Javascript (https://www.javascript.com/)
+- Node and Express (https://nodejs.org/en/about/) ((https://expressjs.com/))
+- Materialize (http://materializecss.com/)
+- Handlebars  (http://handlebarsjs.com/)
 
-The following is a list of optional inline markups supported:
 
-Option name         | Markup           | Result if enabled     |
---------------------|------------------|-----------------------|
-Intra-word emphasis | So A\*maz\*ing   | So A<em>maz</em>ing   |
-Strikethrough       | \~~Much wow\~~   | <del>Much wow</del>   |
-Underline [^under]  | \_So doge\_      | <u>So doge</u>        |
-Quote [^quote]      | \"Such editor\"  | <q>Such editor</q>    |
-Highlight           | \==So good\==    | <mark>So good</mark>  |
-Superscript         | hoge\^(fuga)     | hoge<sup>fuga</sup>   |
-Autolink            | http://t.co      | <http://t.co>         |
-Footnotes           | [\^4] and [\^4]: | [^4] and footnote 4   |
+## Features
+Our app features a powerful, yet easy to use platform for finding help. In todays world time is important and we want to get you that help quickly without adding more stress to your day.
+
+## Code Example
+Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+## Installation
+There is no installation instructions. Heroku has handled all the packages and hosting for you.
+
+## Tests
+There is no written testing but that is part of our expansion process and will start integrating that. 
+
+## How to use?
+Simply go to the site and choose if you want to "find help" or if you want to "sign up to help". After that you will be taken to your respected page and be allowed to select what type of service you are looking for and then selet the person you want, followed by a "succesful match" link. If you choose to sign up for work you will be asked some standard questions for name, area, type of service and then availability. After completion you will be put in the database and will be viewable for all people that meet your search type.
+
+## Contribute
+
+We would love feedback and any ideas you may want to add feel free. Here is our Github page. Create an issue and submit it. (https://github.com/ForHireProject/For-Hire
+)
+## Credits
+
+This app was built by the following, in no particular order.
+
+- Jacob Nifong (jacob.m.nifong@gmail.com)
+- Giel DeAsis (lfagel84@gmail.com)
+- Claire Pate (clairepate11@yahoo.com)
+- Kane Price (price.kane@gmail.com)
+
+## License
+
+MIT © [For-Hire]()
