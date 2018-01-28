@@ -3,6 +3,8 @@ $(document).ready(function () {
 
   $(".modal-trigger").on("click", function (event) {
     event.preventDefault();
+    
+    
     console.log("Adding newWorker...");
 
     // make a newWorker obj
@@ -16,9 +18,9 @@ $(document).ready(function () {
       // phone from input
       phone: $(".inputPhone").val(),
       // service input
-      service: $(".service.value").val()
-    };
+      service: $("#inputService :selected").text()
 
+    };
 
     console.log(newWorker);
     // send an AJAX POST-request with jQuery
