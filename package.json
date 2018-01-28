@@ -23,7 +23,8 @@
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.1",
     "path": "^0.12.7",
-    "sequelize": "^4.32.1"
+    "sequelize": "^4.32.1",
+    "validator": "^9.3.0"
   },
   "devDependencies": {}
 }
