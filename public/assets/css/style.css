@@ -49,14 +49,20 @@
 
 /* centering form */
 #formContainer{
-    margin-left: 375px;
+    margin-left: 400px;
 }
 
 /* submit button on form */
 #formSubmit{
     display: flex;
     justify-content: center;
+    height: 55px;
 }
+
+#selectMenu{
+    font-size: 14px;
+}
+
 
 
 span {
