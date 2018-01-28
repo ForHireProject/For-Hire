@@ -23,7 +23,7 @@ $(document).ready(function () {
     };
 
     console.log(newWorker);
-    // send an AJAX POST-request with jQuery
+    // send an AJAX POST-request using jQuery
     $.post("/api/posts", newWorker)
       // on success, run this callback
       .then(function (data) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
         // tell the user we're adding a newWorker with an alert window
         alert("Adding newWorker...");
       });
-
+      //match this target id/classes to html or handlebars
       $(".inputName").val(""),
       $(".inputZipcode").val(""),
       $(".inputEmail").val(""),
