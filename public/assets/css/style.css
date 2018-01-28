@@ -1,10 +1,11 @@
 /* Homepage*/ 
 
 /* Container holding the image and the text */
+/* form container */
 .container {
     position: relative;
     text-align: center;
-    color: white;
+    color: gray;
     width: 100%;
 }
 
@@ -37,10 +38,15 @@
     opacity: .6;
 }
 
-#sign
+/* Makes services cards smaller */
+.services1{
+    height: 250px;
+}
 
 
-
+#services, #services2, #services3{
+    margin-left:250px;
+}
 
 
 
