@@ -14,13 +14,7 @@ module.exports = function (sequelize, DataTypes) {
         
         zip_code: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: { 
-                isPostalCode: { 
-                    args: [['CA']], 
-                    msg: "--<@@@@@@ NOT A VALID CALIFORNIA POSTAL CODE @@@@@@>--" 
-                    }
-            }
+            allowNull: false
         },
         email: {
             type: DataTypes.STRING,
