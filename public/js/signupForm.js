@@ -10,15 +10,15 @@ $(document).ready(function () {
     // make a newWorker obj
     var newWorker = {
       // name from name input
-      name: $(".inputName").val(),
+      name: $(".inputName").val().trim(),
       // zip-code from input
-      zipcode: $(".inputZipcode").val(),
+      zipcode: $(".inputZipcode").val().trim(),
       // email from input
-      email: $(".inputEmail").val(),
+      email: $(".inputEmail").val().trim(),
       // phone from input
-      phone: $(".inputPhone").val(),
+      phone: $(".inputPhone").val().trim(),
       // service input
-      service: $("#inputService :selected").text()
+      service: $("#inputService :selected").text().trim()
 
     };
 
