@@ -1,52 +1,32 @@
 
+<!-- some container for body content }} -->
 
+<div class="container">
+    <img id="collage" src="assets/images/collage.jpeg" alt="collage" style="width:100%;">
+    <div class="find-help">
+        <form action="/servicesList" method="GET">
+            <button class="waves-effect waves-light btn NAVIGATE light-blue accent-4" id="find-help" type="submit" name="services-list-button" width="450">Find <br> <br> Help
+                {{!-- <i class="material-icons right">send</i> --}}
+            </button>
+        </form>
+    </div>
+    <div class="signup">
+        <form action="/signupForm" method="GET">
+            <button class="waves-effect waves-light btn NAVIGATE light-blue accent-4" id="signup" type="submit" name="sign-up-button" width="450" height="400">Sign up <br>
+            <br>to Help
+                {{!-- <i class="material-icons right">send</i> --}}
+            </button>
+        </form>
+    </div>
 
-{{!-- some header --}}
-<div class="collection">
-    
-        <a href="/workers" class="collection-item">
-            {{!-- increment when new serice is available --}}
-            <span class="new badge">4</span>
-            <h1>FOR HIRE</h1>
-        </a>
-    
 </div>
 
-{{!-- navigational buttons --}}
 
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/css" src="assets/css/style.css"></script>
 
-<form action="/workersList" method="GET">
-    <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Find Help
-        <i class="material-icons right">send</i>
-    </button>
-</form> 
-
-<form action="/signupForm" method="GET">
-    <button class="waves-effect waves-light btn NAVIGATE" id="findHelp" type="submit" name="action" width="100">Sign up to Help
-        <i class="material-icons right">send</i>
-    </button>
-</form>
-
-
-{{!-- some container for body content --}}
-
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="assets/images/hero.jpeg">
-    </div>
-</div>
-<div class="section white">
-    <div class="row container">
-        <h2 class="header">Parallax</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the
-            foreground content while scrolling.</p>
-    </div>
-</div>
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="assets/images/hero.jpeg">
-    </div>
-</div> 
 
 
 

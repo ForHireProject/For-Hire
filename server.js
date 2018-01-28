@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 // Static directory
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));

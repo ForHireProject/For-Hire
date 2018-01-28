@@ -6,60 +6,48 @@
     <meta charset="utf-8">
     <!-- Link to the jQuery Library -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    
+
     <!-- Including Font Awesome Icons -->
     <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
-    
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    
+
     <!-- Compiled and minified Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
+    {{!-- css link --}}
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
-
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">For Hire</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="homePage.handlebars">Home</a>
-                </li>
-                <li>
-                    <a href="servicesList.handlebars">Services</a>
-                </li>
-                <li>
-                    <a href="signupForm.handlebars">Signup</a>
-                </li>
-            </ul>
+        <nav class="top-nav">
+                <div class="nav-wrapper valign-wrapper light-blue accent-4">
+                    <a href="/homepage" class="page-title">For Hire <span class="slogan">Get the help you need fast.</span> </a>
+                </div>
+        </nav>
+    {{{ body }}} 
+    {{!-- footer --}}
+    <footer class="page-footer blue-grey lighten-3">
+        <div class="container">
+            <p class="white-text developed-by">Developed by Jacob Nifong, Claire Pate, Gel DeAsis, and Kane Price</p>
         </div>
-    </nav>
-
-
-    {{{ body }}}
-
-        {{!-- footer --}}
-    <footer class="page-footer">
-        <div class="row">
-            <div class="col s12 m9">
-                <div class="container">
-                    Developed by Jacob Nifong, Claire Pate, Gel DeAsis, and Kane Price
-                </div>
-            </div>
-
-            <div class="col s12 m3">
-                <div class="container">
-                    © 2018 Copyright
-                </div>
-            </div>
+        <div class="footer-copyright">
+        <div class="container">
+        © 2018 Copyright
+        </div>
         </div>
     </footer>
 </body>
 
+<script type="text/javascript" src="/js/signupForm.js"></script>
+
 </html>
+

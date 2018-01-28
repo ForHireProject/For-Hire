@@ -1,39 +1,80 @@
 
+/* Container holding the image and the text */
+/* form container */
+.container {
+    position: relative;
+    text-align: center;
+    color: gray;
+    width: 100%;
+}
+
+/* find help button on home page */
+#find-help {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 300px;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* signup button on home page */
+#signup {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 300px;
+    font-size: 50px;
+    padding: 20px;
+
+}
+/* homepage image */
+#collage{
+    opacity: .6;
+}
+
+/* Makes services cards smaller */
+.services1{
+    height: 250px;
+}
+
+/* moving the services to the center */
+#services, #services2, #services3{
+    margin-left:250px;
+}
+
+/* centering form */
+#formContainer{
+    margin-left: 375px;
+}
+
+/* submit button on form */
+#formSubmit{
+    display: flex;
+    justify-content: center;
+}
+
+
 span {
     background-repeat: no-repeat;
     padding: 0;
     margin: 25px;
 }   
-.parallax-container {
-      height: "your height here";
-    }
 
- /* body {
+
+/* body {
+
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
-    flex: 1 0 auto;
-  } */
 
-  .btn, .btn-large {
-    text-decoration: none;
-    color: #fff;
-    background-color: hsl(209, 69%, 42%);
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-    height: 144px;
-    margin: 3px;
-}
-/* navigation buttons */
-#findHelp {
-    height: 44px;
-    color: white
-}
+
 /* customize this alert */
 span.badge.new:after {
     content: " NEW helper!";
@@ -44,5 +85,30 @@ span.badge.new {
     color: #fff;
     background-color: hsl(0, 80%, 43%);
     border-radius: 2px;
+}
+
+/*Footer*/
+.developed-by {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* margin-left: 400px; */
+    text-align: center;
+}
+
+/* for hire title */
+
+.page-title {
+    font-size: 50px;
+    margin-left: 375px;
+}
+
+/* slogan */
+.slogan{
+    font-size: 25px;
+}
+
+/* nav bar */
+.top-nav {
+    height: 90px;
 }
 
