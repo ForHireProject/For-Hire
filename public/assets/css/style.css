@@ -1,4 +1,3 @@
-/* Homepage*/ 
 
 /* Container holding the image and the text */
 /* form container */
@@ -9,7 +8,7 @@
     width: 100%;
 }
 
-/* Bottom left text */
+/* find help button on home page */
 #find-help {
     position: absolute;
     top: 50%;
@@ -21,7 +20,7 @@
     text-align: center;
 }
 
-/* Top left text */
+/* signup button on home page */
 #signup {
     position: absolute;
     top: 50%;
@@ -33,7 +32,7 @@
     padding: 20px;
 
 }
-
+/* homepage image */
 #collage{
     opacity: .6;
 }
@@ -43,12 +42,21 @@
     height: 250px;
 }
 
-
+/* moving the services to the center */
 #services, #services2, #services3{
     margin-left:250px;
 }
 
+/* centering form */
+#formContainer{
+    margin-left: 375px;
+}
 
+/* submit button on form */
+#formSubmit{
+    display: flex;
+    justify-content: center;
+}
 
 
 span {
@@ -87,16 +95,19 @@ span.badge.new {
     text-align: center;
 }
 
+/* for hire title */
 
 .page-title {
     font-size: 50px;
     margin-left: 375px;
 }
 
+/* slogan */
 .slogan{
     font-size: 25px;
 }
 
+/* nav bar */
 .top-nav {
     height: 90px;
 }

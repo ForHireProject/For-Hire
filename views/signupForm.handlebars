@@ -1,6 +1,5 @@
-//signupForm.handlebars
 
-<div class="container">
+<div class="container" id="formContainer">
     {{!-- form action --}}
     <form action="/api/new" method="POST" role="form">
 
@@ -55,7 +54,7 @@
 
 
         <div class="row">
-            <form class="col s12 inputService">
+            <form class="inputService col s12">
                 <div class="row">
                     <i class="material-icons prefix">subdirectory_arrow_right</i>
                     <label>Select Skill</label>
@@ -85,9 +84,11 @@
 </div>
 
 <!-- Modal Trigger -->
-<button data-target="modal1" class="btn modal-trigger">Submit
-    <i class="material-icons right">send</i>
-</button>
+<div id="formSubmit">
+    <button data-target="modal1" class="btn modal-trigger">Submit
+        <i class="material-icons right">send</i>
+    </button>
+</div>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal modal-fixed-footer">
