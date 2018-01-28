@@ -42,7 +42,7 @@ module.exports = function (app) {
         res.render("homePage");
     });
 
-    // NEW USER info after sign-up, ADD to DATABASE
+    // NEW USER info after sign-up, ADD to DATABASE (THIS CONNECTS WITH JQUERY WITH SAME post METHOD and ROUTE)
     app.post("/api/posts", function (req, res) {
         console.log("SEE THIS IN CONSOLE", req.body);
         db.Worker.create({
