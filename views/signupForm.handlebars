@@ -1,10 +1,22 @@
+<br>
+<div class="container">
+<div class="row">
+    <div class="col m6 offset-m3">
+        <div class="card-panel blue-grey lighten-3" id="inforFormCard">
+            <span class="white-text">Please enter your information below so that you are able to be hired.
+            </span>
+        </div>
+    </div>
+</div>
+</div>
+
 
 <div class="container" id="formContainer">
     {{!-- form action --}}
     <form action="/api/posts" method="POST" role="form">
 
         <div class="row">
-            <form class="col s12">
+            <form class="col m6">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -56,12 +68,13 @@
 
 
         <div class="row">
-            <form class="inputService col s12">
+            <form class="col s12">
                 <div class="row">
+                    <div class="inputService col s6">
                     <i class="material-icons prefix">subdirectory_arrow_right</i>
-                    <label>Select Skill</label>
+                    <label id="selectMenu">Select Skill</label>
                     <select id="inputService">
-                        <option value="" disabled>Choose your option</option>
+                        <option value="" id="choose">Choose your option</option>
                         <option value="1">Customer Service</option>
                         <option value="2">Handy Work</option>
                         <option value="3">Culinary</option>
@@ -72,6 +85,7 @@
                         <option value="8">Finance</option>
                         <option value="9">Technology</option>
                     </select>
+                    </div>
                 </div>
             </form>
         </div>
@@ -90,17 +104,23 @@
 
 <!-- Modal Trigger -->
 <div id="formSubmit">
-    <button data-target="modal1" class="btn modal-trigger">Submit
+    <button data-target="modal1" class="btn modal-trigger light-blue accent-4">Submit
         <i class="material-icons right">send</i>
     </button>
 </div>
+
+<br><br>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4>You're Hired!</h4>
-        <p>Well, not yet. But you're in our database and will now show up under the service you selected to those who are looking
-            to hire people like you.</p>
+        <p>
+            Well, not yet. 
+            <br><br> 
+            You're in our database and will now show up under the service you selected to those who are looking
+            to hire people like you.
+        </p>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Home</a>
