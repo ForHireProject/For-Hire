@@ -5,32 +5,39 @@
     position: relative;
     text-align: center;
     color: white;
+    width: 100%;
 }
 
 /* Bottom left text */
-.bottom-left {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-}
-
-/* Top left text */
-.top-left {
+#find-help {
     position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
+    height: 250px;
+    width: 300px;
+    font-size: 50px;
+    text-align: center;
 }
 
-.container{
-    width: 100%;
+/* Top left text */
+#signup {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 300px;
+    font-size: 50px;
+    padding: 20px;
+
 }
 
 #collage{
-    opacity: .7;
+    opacity: .6;
 }
 
+#sign
 
 
 
@@ -70,14 +77,21 @@ span.badge.new {
 .developed-by {
     margin-top: 0px;
     margin-bottom: 0px;
+    /* margin-left: 400px; */
+    text-align: center;
 }
 
 
 .page-title {
-    font-size: 72px;
+    font-size: 50px;
+    margin-left: 375px;
+}
+
+.slogan{
+    font-size: 25px;
 }
 
 .top-nav {
-    height: 110px;
+    height: 90px;
 }
 
