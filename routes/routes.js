@@ -7,7 +7,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     // GET all workers
-    app.get("/workersList/service", function (req, res) {
+    app.get("/workersList/:service", function (req, res) {
         db.Worker.findAll({where: {Service: req.params.service}})
         .then(function (data) {
             var hbsObject = {workers: data};
@@ -37,7 +37,7 @@ module.exports = function (app) {
         res.render("servicesList");
     });
 
-    //GET root route (thank for this Kane)
+    // GET root route (thank for this Kane)
     app.get("/*", function (req, res) {
         res.render("homePage");
     });
