@@ -66,15 +66,16 @@ module.exports = function (app) {
     // =============================================================
  
 
-    // GET route - random photo
-    app.get("/workersList/:service", function (req, res) {
+    // // GET route - random photo
+    // app.get("/workersList/:service", function (req, res) {
 
-        var hbsObject = {
-            photo: randomImage
-        };
-        console.log("THIS is workers DATA heyyooo", hbsObject);
-        res.render("workersList", hbsObject)
-    })
+
+    //     var hbsObject = {
+    //         photo: photoPic
+    //     };
+    //     console.log("THIS is workers DATA heyyooo", hbsObject);
+    //     res.render("workersList", hbsObject)
+    // })
 
 //===================================================================
 

@@ -3,7 +3,10 @@ var validator = require('validator');
 module.exports = function (sequelize, DataTypes) {
 
     var Worker = sequelize.define("Worker", {
-
+        url_link: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,

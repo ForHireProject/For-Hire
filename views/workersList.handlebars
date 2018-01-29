@@ -1,13 +1,28 @@
 {{!-- some header --}}
+{{!-- <script>
+    var photoPic = [];
+    for (var i = 0; i < 20; i++) {
+        $.ajax({
+            url: 'https://randomuser.me/api/?gender',
+            dataType: 'json',
+            success: function (url, url2) {
+                //console.log(data);
+                //var photo = data.results[i].picture.large;
+                //console.log(data.results[0].picture.large);
+                photo = url.results[0].picture.large;
+                console.log();
 
-
+            }
+        });
+    }
+</script> --}}
 {{!-- list of available workers --}}
 {{#each workers}}
     <div class="row">
         <div class="col s12 m3">
             <div class="card">
                 <div class="card-image">
-                    <img src="https://picsum.photos/200/300/?random">
+                    <img src="{{this.url_link}}">
                     <span id="worker-name" class="card-title"></span>
                     <a href="mailto:{{this.email}}?Subject=For Hire" class="btn-floating halfway-fab waves-effect waves-light green" title="Send {{this.name}} a message!">
                         <i class="material-icons">mode_edit</i>
