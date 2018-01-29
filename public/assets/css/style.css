@@ -1,4 +1,9 @@
 
+body{
+    background-color: #f5f5f5;
+}
+
+
 /* Container holding the image and the text */
 /* form container */
 .container {
@@ -46,6 +51,12 @@
 #services, #services2, #services3{
     margin-left:250px;
 }
+
+/* Services picture border */
+.card-content{
+    border: 10px, black;
+}
+
 
 /* centering form */
 #formContainer{
