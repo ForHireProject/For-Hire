@@ -2,11 +2,16 @@
 // Grabbing our models
 var db = require("../models");
 
+
+
+
+
+
 // Routes
 // =============================================================
 module.exports = function (app) {
 
-    // GET all workers
+    // GET all types of workers
     app.get("/workersList/:service", function (req, res) {
         db.Worker.findAll({where: {Service: req.params.service}})
         .then(function (data) {
@@ -56,5 +61,21 @@ module.exports = function (app) {
                 res.json(dbPost);
             });
     });
+
+
+    // =============================================================
+ 
+
+    // GET route - random photo
+    app.get("/workersList/:service", function (req, res) {
+
+        var hbsObject = {
+            photo: randomImage
+        };
+        console.log("THIS is workers DATA heyyooo", hbsObject);
+        res.render("workersList", hbsObject)
+    })
+
+//===================================================================
 
 }
