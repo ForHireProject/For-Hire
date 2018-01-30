@@ -7,6 +7,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 const multer = require('multer');
+const path = require('path');
 
 
 // Sets up the Express App
@@ -16,7 +17,7 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-var path = require('path');
+
 
 
 // Sets up the Express app to handle data parsing
@@ -61,27 +62,21 @@ function checkFileType(file, cb) {
   }
 }
 
-// Multer associated code
-app.use(express.static('./public'));
-
-app.get('/', (req, res) => res.render('workersList'));
+app.get('/', (req, res) => res.render('signupForm'));
 
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if (err) {
-      res.render('workersList', {
+      res.render('signupForm', {
         msg: err
       });
     } else {
       if (req.file == undefined) {
-        res.render('workersList', {
+        res.render('signupForm', {
           msg: 'Error: No File Selected!'
         });
       } else {
-        res.render('workersList', {
-          msg: 'File Uploaded!',
-          file: req.file.filename
-        });
+        res.render('signupForm', { file: "/uploads/" + req.file.filename});
       }
     }
   });
