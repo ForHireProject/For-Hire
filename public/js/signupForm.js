@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     // make a newWorker obj NOTE: THIS IS MYSQL MODEL EQUIVALENT, SO MAKE SURE EACH PROPERTY MATCHES THE MODEL
     var newWorker = {
+      url_link: $(".url_link").val().trim(),
       // name from name input
       name: $(".inputName").val().trim(),
       // zip-code from input
@@ -30,9 +31,10 @@ $(document).ready(function () {
         // log the data we found
         console.log(data);
         // tell the user we're adding a newWorker with an alert window
-        alert("Adding newWorker...");
+        console.log("Adding newWorker...");
       });
       //match this target id/classes to html or handlebars
+      $(".url_link").val(""),
       $(".inputName").val(""),
       $(".inputZipcode").val(""),
       $(".inputEmail").val(""),

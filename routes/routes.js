@@ -2,11 +2,6 @@
 // Grabbing our models
 var db = require("../models");
 
-
-
-
-
-
 // Routes
 // =============================================================
 module.exports = function (app) {
@@ -51,6 +46,7 @@ module.exports = function (app) {
     app.post("/api/posts", function (req, res) {
         console.log("SEE THIS IN CONSOLE", req.body);
         db.Worker.create({
+            url_link: req.body.url_link,
             name: req.body.name,
             zip_code: req.body.zip_code,
             email: req.body.email,
