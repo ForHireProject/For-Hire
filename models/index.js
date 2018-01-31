@@ -13,7 +13,7 @@ if (config.use_env_variable) {
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-
+//whew lad please upload
 fs
   .readdirSync(__dirname)
   .filter(file => {
