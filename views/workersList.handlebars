@@ -19,28 +19,36 @@
 
 
 
-{{#each workers}}
+ {{!-- {{#each workers}}  --}}
+    {{#everyNth workers 3}} 
+        {{#if isModZeroNotFirst}}
+            </div>
+        {{/if}} {{#if isModZero}}
+
     <div class="row">
-        <div class="col s12 m3">
+        {{/if}}
+        <div class="col m4">
             <div class="card">
                 <div class="card-image">
-                    <img src="{{this.url_link}}">
+                    <img src="{{this.dataValues.url_link}}">
                     <span id="worker-name" class="card-title"></span>
-                    <a href="mailto:{{this.email}}?Subject=For Hire" class="btn-floating halfway-fab waves-effect waves-light green" title="Send {{this.name}} a message!">
+                    <a href="mailto:{{this.dataValues.email}}?Subject=For Hire" class="btn-floating halfway-fab waves-effect waves-light green"
+                        title="Send {{this.dataValues.name}} a message!">
                         <i class="material-icons">mode_edit</i>
                     </a>
                 </div>
                 <div class="card-content">
-                    <p id="skill">Name: {{this.name}} </p>
-                    <p id="skill">Service: {{this.service}} </p>
-                    <p id="zipcode">Zipcode: {{this.zip_code}} </p>
-                    <p id="phone">Phone: {{this.phone}}</p>
-                    <p id="email">Email: {{this.email}}</p>
+                    <p id="skill">Name: {{this.dataValues.name}} </p>
+                    <p id="skill">Service: {{this.dataValues.service}} </p>
+                    <p id="zipcode">Zipcode: {{this.dataValues.zip_code}} </p>
+                    <p id="phone">Phone: {{this.dataValues.phone}}</p>
+                    <p id="email">Email: {{this.dataValues.email}}</p>
                 </div>
             </div>
         </div>
+        {{#if isLast}}
     </div>
-{{/each}}
+    {{/if}} {{/everyNth}}
 
 
 

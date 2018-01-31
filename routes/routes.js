@@ -16,7 +16,7 @@ module.exports = function (app) {
         db.Worker.findAll({where: {Service: req.params.service}})
         .then(function (data) {
             var hbsObject = {workers: data};
-            console.log(hbsObject);
+            console.log(hbsObject.workers[0].dataValues);
             res.render("workersList", hbsObject)
         });
     });
