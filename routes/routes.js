@@ -6,12 +6,14 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
+    
+
     // GET all types of workers
     app.get("/workersList/:service", function (req, res) {
         db.Worker.findAll({where: {Service: req.params.service}})
         .then(function (data) {
             var hbsObject = {workers: data};
-            console.log(hbsObject.workers[0].dataValues);
+            //console.log(hbsObject.workers[0].dataValues);
             res.render("workersList", hbsObject)
         });
     });
@@ -28,6 +30,8 @@ module.exports = function (app) {
         })
     });
 
+
+
     //GET sign-up form
     app.get("/signupForm", function (req, res) {
             res.render("signupForm");
@@ -41,6 +45,8 @@ module.exports = function (app) {
     app.get("/*", function (req, res) {
         res.render("homePage");
     });
+
+
 
     // NEW USER info after sign-up, ADD to DATABASE (THIS CONNECTS WITH JQUERY WITH SAME post METHOD and ROUTE)
     app.post("/api/posts", function (req, res) {

@@ -65,7 +65,7 @@ function checkFileType(file, cb) {
   }
 }
 
-app.get('/', (req, res) => res.render('signupForm'));
+//app.get('/', (req, res) => res.render('signupForm'));
 
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
