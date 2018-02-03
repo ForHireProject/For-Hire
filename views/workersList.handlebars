@@ -24,7 +24,9 @@
     {{#everyNth workers 3}} 
         {{#if isModZeroNotFirst}}
             </div>
-        {{/if}} {{#if isModZero}}
+        {{/if}} 
+        
+    {{#if isModZero}}
 
     <div class="row">
         {{/if}}
@@ -34,18 +36,31 @@
 
                     <img src="{{this.dataValues.url_link}}">
 
-                    {{!-- <img src="/public/uploads/{{file}}"> --}}
-                    <img src="{{this.url_link}}">
-
                     <span id="worker-name" class="card-title"></span>
-                    <a href="mailto:{{this.dataValues.email}}?Subject=For Hire" class="btn-floating halfway-fab waves-effect waves-light green"
-                        title="Send {{this.dataValues.name}} a message!">
+                <p>
+                    <a href="mailto:{{this.dataValues.email}}?Subject=For Hire" class='btn-floating right btn-large waves-effect waves-light green'>
                         <i class="material-icons">mode_edit</i>
                     </a>
+                </p>
+                <p>
+                    <a href="/chat/{{this.dataValues.id}}" class='btn-floating right btn-large waves-effect waves-light teal'>
+                        <input type="hidden" class="zipcode-text" type="text" value={{this.dataValues.id}}>
+                        <i class="material-icons">chat</i>
+                    </a>
+                </p>
+                    {{!-- worker map --}}
+                <form action="http://localhost:8080/workersListMap/:zip_code" class="worker-zipcode">
+                    <input type="hidden" class="zipcode-text" type="text" value={{this.dataValues.zip_code}}>
+                    <a href="http://localhost:8080/workersListMap/{{this.dataValues.zip_code}}" class='btn-floating right btn-large waves-effect waves-light blue'>
+                        <i class="material-icons">map</i>
+                    </a>
+                </form>
+
+
                 </div>
                 <div class="card-content">
                     <p id="skill">Name: {{this.dataValues.name}} </p>
-                    <p id="skill">Service: {{this.dataValues.service}} </p>
+                    <p id="skill">Service: {{this.dataValues.comment}} </p>
                     <p id="zipcode">Zipcode: {{this.dataValues.zip_code}} </p>
                     <p id="phone">Phone: {{this.dataValues.phone}}</p>
                     <p id="email">Email: {{this.dataValues.email}}</p>
@@ -55,6 +70,9 @@
         {{#if isLast}}
     </div>
     {{/if}} {{/everyNth}}
+
+
+   
 
 
 

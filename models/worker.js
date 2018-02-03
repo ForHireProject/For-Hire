@@ -9,9 +9,9 @@ module.exports = function (sequelize, DataTypes) {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: { msg: "--<@@@@@@ NO NUMBERS @@@@@@>--"}
-                } 
+            // validate: {
+            //     isAlpha: { msg: "--<@@@@@@ NO NUMBERS @@@@@@>--"}
+            //     } 
         },
         
         zip_code: {
@@ -24,14 +24,23 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
             validator: { isEmail: true }
         },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         phone: {
             type: DataTypes.STRING,
             allowNull: false
         },
         service: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.TEXT,
+            allowNull: true,
             validate: {len: [1] }
+        },
+        comment: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: { len: [1] }
         },
         date: {
             type: DataTypes.DATE,
@@ -40,7 +49,9 @@ module.exports = function (sequelize, DataTypes) {
     }, {
             timestamps: false,
             freezeTableName: true
-        });
+        }
+    
+    );
 
     return Worker;
     

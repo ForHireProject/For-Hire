@@ -6,8 +6,6 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
-    
-
     // GET all types of workers
     app.get("/workersList/:service", function (req, res) {
         db.Worker.findAll({where: {Service: req.params.service}})
@@ -18,6 +16,40 @@ module.exports = function (app) {
         });
     });
 
+    // GET all types of workers on a MAP with markers
+    app.get("/workersListMap/:zip_code", function (req, res) {
+        console.log("HBSOBJECT HERE >>>>>>", req.params);
+        db.Worker.findAll({ where: { zip_code: req.params.zip_code } })
+            .then(function (data) {
+                var hbsObject = { workers: data };
+                console.log("HBSOBJECT HERE >>>>>>",hbsObject);
+                //console.log(hbsObject.workers[0].dataValues);
+                res.render("workersListMap", hbsObject)
+            });
+    });
+
+    //chatbox page
+    app.post("/api/login", function (req, res) {
+        db.Worker.findAll({ where: { 
+            email: req.body.email,
+            password: req.body.password
+             } 
+        }).then(function (data) {
+            if (data.length === 0) {
+                res.render("login");
+            }
+            else {
+            console.log(data);
+                var hbsObject = { user: data };
+                res.render("chatBox", hbsObject);
+            }
+            });
+    });
+
+    app.get("/chat/:id", function (req, res) {
+        res.render("chatBoxHirer");
+});
+
     // GET route - homePage
     app.get("/homePage", function (req, res) {
         console.log("homePage is working");
@@ -26,16 +58,18 @@ module.exports = function (app) {
                 worker: data
             };
             console.log("THIS is workers DATA heyyooo", hbsObject);
-            res.render("homePage", hbsObject)
+            res.render("homePage")
         })
     });
-
-
 
     //GET sign-up form
     app.get("/signupForm", function (req, res) {
             res.render("signupForm");
     });
+
+    app.get("/login", function (req, res) {
+        res.render("login");
+});
 
     app.get("/servicesList", function(req, res) {
         res.render("servicesList");
@@ -46,8 +80,6 @@ module.exports = function (app) {
         res.render("homePage");
     });
 
-
-
     // NEW USER info after sign-up, ADD to DATABASE (THIS CONNECTS WITH JQUERY WITH SAME post METHOD and ROUTE)
     app.post("/api/posts", function (req, res) {
         console.log("SEE THIS IN CONSOLE", req.body);
@@ -55,7 +87,9 @@ module.exports = function (app) {
             url_link: req.body.url_link,
             name: req.body.name,
             zip_code: req.body.zip_code,
+            comment: req.body.comment,
             email: req.body.email,
+            password: req.body.password,
             phone: req.body.phone,
             service: req.body.service
         })
@@ -65,20 +99,9 @@ module.exports = function (app) {
     });
 
 
+
     // =============================================================
  
-
-    // // GET route - random photo
-    // app.get("/workersList/:service", function (req, res) {
-
-
-    //     var hbsObject = {
-    //         photo: photoPic
-    //     };
-    //     console.log("THIS is workers DATA heyyooo", hbsObject);
-    //     res.render("workersList", hbsObject)
-    // })
-
 //===================================================================
 
 }
