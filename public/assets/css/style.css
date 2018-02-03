@@ -83,14 +83,6 @@ span {
 }   
 
 
-/* body {
-
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-
 
 /* customize this alert */
 span.badge.new:after {
@@ -135,3 +127,13 @@ span.badge.new {
     font-size: 27px;
     color: #6c67d5;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
