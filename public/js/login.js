@@ -2,11 +2,10 @@ $(document).ready(function () {
     
     
     
-    $(function () {
+    $(".login-button").on("click", function () {
+	event.preventDefault();
         $("#yourLoggedin").hide();
-        $(".login-button").on("click", function () {
-            event.preventDefault();
-            $("#nav-mobile, #yourLoggedin ").toggle();
+        $("#nav-mobile, #yourLoggedin ").toggle();
         });
     });
     
