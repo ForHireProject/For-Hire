@@ -1,13 +1,12 @@
-$(document).ready(function () {
+//$(document).ready(function () {
     
     
     
-    $(".login-button").on("click", function () {
-	event.preventDefault();
-        $("#yourLoggedin").hide();
-        $("#nav-mobile, #yourLoggedin ").toggle();
-        });
-    });
+    //$(".login-button").on("click", function () {
+	//event.preventDefault();
+        //$("#yourLoggedin").hide();
+        //});
+    //});
     
     
 
@@ -33,5 +32,5 @@ $(document).ready(function () {
     //     //$("#yourLoggedin").show();
 
 	// });
-  });
+  //});
   
