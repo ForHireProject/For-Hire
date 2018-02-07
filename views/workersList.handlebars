@@ -37,18 +37,20 @@
                     <img src="{{this.dataValues.url_link}}">
 
                     <span id="worker-name" class="card-title"></span>
+                {{!-- mail button --}}
                 <p>
                     <a href="mailto:{{this.dataValues.email}}?Subject=For Hire" class='btn-floating right btn-large waves-effect waves-light green'>
                         <i class="material-icons">mode_edit</i>
                     </a>
                 </p>
+                {{!-- chat button --}}
                 <p>
                     <a href="/chat/{{this.dataValues.id}}" class='btn-floating right btn-large waves-effect waves-light teal'>
                         <input type="hidden" class="zipcode-text" type="text" value={{this.dataValues.id}}>
                         <i class="material-icons">chat</i>
                     </a>
                 </p>
-                    {{!-- worker map --}}
+                {{!-- worker map --}}
                 <form action="/workersListMap/:zip_code" class="worker-zipcode">
                     <input type="hidden" class="zipcode-text" type="text" value={{this.dataValues.zip_code}}>
                     <a href="/workersListMap/{{this.dataValues.zip_code}}" class='btn-floating right btn-large waves-effect waves-light blue'>
@@ -61,9 +63,9 @@
                 <div class="card-content">
                     <p id="skill">Name: {{this.dataValues.name}} </p>
                     <p id="skill">Service: {{this.dataValues.comment}} </p>
-                    <p id="zipcode">Zipcode: {{this.dataValues.zip_code}} </p>
+                    {{!-- <p id="zipcode">Zipcode: {{this.dataValues.zip_code}} </p>
                     <p id="phone">Phone: {{this.dataValues.phone}}</p>
-                    <p id="email">Email: {{this.dataValues.email}}</p>
+                    <p id="email">Email: {{this.dataValues.email}}</p> --}}
                 </div>
             </div>
         </div>

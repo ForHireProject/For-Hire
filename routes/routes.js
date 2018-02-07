@@ -1,19 +1,71 @@
-
 // Grabbing our models
 var db = require("../models");
+var passport = require("passport");
 
 // Routes
 // =============================================================
-module.exports = function (app) {
+module.exports = function (app, passport) {
+
+    app.get("/login", function (req, res) {
+        res.render("login");
+    });
+    // route for home page
+    app.get('/', function (req, res) {
+        res.render('homePage'); // load the index.ejs file
+    });
+
+    // route for showing the profile page
+    app.get('/profile', isLoggedIn, function (req, res) {
+        res.render('profile', {
+            user: req.user // get the user out of session and pass to template
+        });
+    });
+    // =====================================
+    // google ROUTES =====================
+    // =====================================
+    // route for google authentication and login
+    app.get('/auth/google', passport.authenticate('google', {
+        scope: ['public_profile', 'email']
+    }));
+
+    // handle the callback after google has authenticated the user
+    app.get('/auth/google/callback',
+        passport.authenticate('google', {
+            successRedirect: '/profile',
+            failureRedirect: '/'
+        }));
+
+    // route for logging out
+    app.get('/logout', function (req, res) {
+        req.logout();
+        res.redirect('/');
+    });
+
+
+    // route middleware to make sure a user is logged in
+    function isLoggedIn(req, res, next) {
+
+        // if user is authenticated in the session, carry on
+        if (req.isAuthenticated())
+            return next();
+
+        // if they aren't redirect them to the home page
+        res.redirect('/');
+    }
+
+    // GET root route (thank for this Kane)
+    app.get("/profile", function (req, res) {
+        res.render("profile");
+    });
 
     // GET all types of workers
     app.get("/workersList/:service", function (req, res) {
-        db.Worker.findAll({where: {Service: req.params.service}})
-        .then(function (data) {
-            var hbsObject = {workers: data};
-            //console.log(hbsObject.workers[0].dataValues);
-            res.render("workersList", hbsObject)
-        });
+        db.Worker.findAll({ where: { Service: req.params.service } })
+            .then(function (data) {
+                var hbsObject = { workers: data };
+                //console.log(hbsObject.workers[0].dataValues);
+                res.render("workersList", hbsObject)
+            });
     });
 
     // GET all types of workers on a MAP with markers
@@ -22,33 +74,17 @@ module.exports = function (app) {
         db.Worker.findAll({ where: { zip_code: req.params.zip_code } })
             .then(function (data) {
                 var hbsObject = { workers: data };
-                console.log("HBSOBJECT HERE >>>>>>",hbsObject);
+                console.log("HBSOBJECT HERE >>>>>>", hbsObject);
                 //console.log(hbsObject.workers[0].dataValues);
                 res.render("workersListMap", hbsObject)
             });
     });
 
-    //chatbox page
-    app.post("/api/login", function (req, res) {
-        db.Worker.findAll({ where: { 
-            email: req.body.email,
-            password: req.body.password
-             } 
-        }).then(function (data) {
-            if (data.length === 0) {
-                res.render("login");
-            }
-            else {
-            console.log(data);
-                var hbsObject = { user: data };
-                res.render("chatBox", hbsObject);
-            }
-            });
-    });
+
 
     app.get("/chat/:id", function (req, res) {
         res.render("chatBoxHirer");
-});
+    });
 
     // GET route - homePage
     app.get("/homePage", function (req, res) {
@@ -64,21 +100,16 @@ module.exports = function (app) {
 
     //GET sign-up form
     app.get("/signupForm", function (req, res) {
-            res.render("signupForm");
+        res.render("signupForm");
     });
 
-    app.get("/login", function (req, res) {
-        res.render("login");
-});
+   
 
-    app.get("/servicesList", function(req, res) {
+    app.get("/servicesList", function (req, res) {
         res.render("servicesList");
     });
 
-    // GET root route (thank for this Kane)
-    app.get("/*", function (req, res) {
-        res.render("homePage");
-    });
+
 
     // NEW USER info after sign-up, ADD to DATABASE (THIS CONNECTS WITH JQUERY WITH SAME post METHOD and ROUTE)
     app.post("/api/posts", function (req, res) {
@@ -99,9 +130,9 @@ module.exports = function (app) {
     });
 
 
-
     // =============================================================
- 
-//===================================================================
+
+
+    //===================================================================
 
 }
