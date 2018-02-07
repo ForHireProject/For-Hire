@@ -39,7 +39,7 @@ body{
 }
 /* homepage image */
 #collage{
-    opacity: .6;
+    opacity: 0.789;
 }
 
 /* Makes services cards smaller */
@@ -82,8 +82,14 @@ span {
     margin: 25px;
 }   
 
-
-
+/* login */
+.form-control {
+    text-align: center;
+    width: 50%;
+}
+input.form-control {
+    width: 50%;
+}
 /* customize this alert */
 span.badge.new:after {
     content: " NEW helper!";
@@ -127,13 +133,14 @@ span.badge.new {
     font-size: 27px;
     color: #6c67d5;
 }
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+    position: relative;
+    left: 200git s%;
+}
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }

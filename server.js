@@ -11,10 +11,20 @@ var io = require('socket.io')(http);
 var bodyParser = require("body-parser");
 const path = require('path');
 var _ = require("underscore");
+var session = require('express-session');
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
+
+
+//Environment variables
+require('dotenv').config();
+clientID: "1034421344860-ksgl4clmlrtsm20bej5kvev2v1pnuk7e.apps.googleusercontent.com";
+clientSecret: "YUGny2EgMQtDg6Jd7u8XLljA";
+
 
 // Sets up the Express App
 // =============================================================
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8000;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -53,15 +63,40 @@ var hbs = exphbs.create({
   }
 });
 
+// required for passport
 
+app.use(passport.initialize());
 
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+//Google authentication configuration
+passport.use(new GoogleStrategy({
+  clientID: "1034421344860-ksgl4clmlrtsm20bej5kvev2v1pnuk7e.apps.googleusercontent.com",
+  clientSecret: "YUGny2EgMQtDg6Jd7u8XLljA",
+  callbackURL: "http://localhost:8080/auth/google/callback"
+},
+  function (accessToken, refreshToken, profile, done) {
+    db.users.findOne({ where: { google_id: profile.id } }).then(function (user) {
+      if (!user) {
+        var google_id = profile.id;
+        var email = profile.emails[0].value;
+        db.users.create({ user_email: email, google_id: google_id }).then(function (user) {
+          return done(null, user);
+        })
+      } else {
+        return done(null, user);
+      }
+    })
+  }
+));
+
+
+
 // Routes
 // =============================================================
-require('./routes/routes.js')(app);
+require('./routes/routes.js')(app, passport);
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
